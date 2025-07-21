@@ -1,0 +1,1946 @@
+/* Global font settings */
+*:not(.fas):not(.fa):not(.fa-*):not([class^="fa-"]) {
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 18px !important;
+}
+
+/* 保留Font Awesome图标 */
+.fas, .fa, .fa-*, [class^="fa-"] {
+  font-family: "Font Awesome 6 Free" !important;
+  font-size: inherit !important;
+}
+
+/* Heading size exceptions */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+h1 { font-size: 26px !important; }
+h2 { font-size: 22px !important; }
+h3 { font-size: 20px !important; }
+
+/* Globally disable scrollbars */
+html, body, div, .jspsych-display-element, .jspsych-content-wrapper {
+  overflow: hidden !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+/* Hide scrollbars in WebKit browsers */
+::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+body {
+  background-color: rgb(243, 241, 232); /* Changed to beige color */
+  text-align: center;
+  display: flex; /* Added display flex */
+  flex-direction: column; /* Added flex direction */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+/* Style for participant form container */
+.wrapTextBox {
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 18px !important;
+  line-height: 1.5;
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Card container styling */
+.card-container {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  border: 1px solid #eaeaea;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px 8px 0 0;
+  color: white;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.card-header .icon {
+  font-size: 24px;
+  color: white;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.input-container:focus-within {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.icon-input {
+  color: #7f8c8d;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.input-container input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 5px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  outline: none;
+}
+
+.input-container input::placeholder {
+  color: #b2bec3;
+}
+
+/* Format box styling */
+.format-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border-left: 4px solid #3498db;
+}
+
+.format-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.format-item:last-child {
+  margin-bottom: 0;
+}
+
+.icon-sm {
+  color: #3498db;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+/* Example box styling */
+.example-box {
+  display: flex;
+  align-items: center;
+  background-color: #fffbea;
+  border: 1px dashed #ffd43b;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  gap: 12px;
+}
+
+.example-box .icon {
+  color: #f39c12;
+  font-size: 20px;
+}
+
+/* Section dividers */
+.section-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section-divider .divider-content {
+  padding: 0 15px;
+  color: #7f8c8d;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Intro text styling */
+.intro-text {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+/* Info grid styling */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.info-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.info-card-header {
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-card-header i {
+  font-size: 20px;
+}
+
+.info-card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.info-card-body {
+  padding: 15px;
+}
+
+.info-card-body p {
+  margin: 0;
+  color: #555;
+}
+
+/* Highlight box styling */
+.highlight-box {
+  display: flex;
+  background-color: #eaf2f8;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0 10px 0;
+  border-left: 5px solid #3498db;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.highlight-icon {
+  background-color: #3498db;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.highlight-icon i {
+  font-size: 20px;
+}
+
+.highlight-content h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+/* 当highlight-content在蓝色背景元素内时，文字颜色设为白色 */
+[style*="background-color: #3498db"] .highlight-content h4,
+[style*="background-color: #4682B4"] .highlight-content h4 {
+  color: white;
+}
+
+.highlight-content p {
+  margin: 0;
+  color: #34495e;
+}
+
+/* 当highlight-content在蓝色背景元素内时，文字颜色设为白色 */
+[style*="background-color: #3498db"] .highlight-content p,
+[style*="background-color: #4682B4"] .highlight-content p {
+  color: white;
+}
+
+/* Steps container styling */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.step-card {
+  display: flex;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.step-number {
+  background-color: #3498db;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-content {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.step-header i {
+  color: #3498db;
+  font-size: 18px;
+}
+
+.step-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+/* 当step-header在蓝色背景元素内时，文字颜色设为白色 */
+.card-header .step-header h3,
+[style*="background-color: #3498db"] .step-header h3,
+[style*="background-color: #4682B4"] .step-header h3 {
+  color: white;
+}
+
+.step-content p {
+  margin: 0;
+  color: #555;
+}
+
+/* Next section box styling */
+.next-section-box {
+  display: flex;
+  background-color: #f0f9ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0 10px 0;
+  border: 1px dashed #3498db;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.next-section-icon {
+  color: #3498db;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.next-section-content h4 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.next-section-content p {
+  margin: 0;
+  color: #34495e;
+}
+
+/* Content section styling */
+.content-section {
+  margin-bottom: 30px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.section-header i {
+  color: #3498db;
+  font-size: 20px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* 当section-header在蓝色背景元素内时，文字颜色设为白色 */
+.card-header .section-header h3,
+[style*="background-color: #3498db"] .section-header h3,
+[style*="background-color: #4682B4"] .section-header h3 {
+  color: white;
+}
+
+/* Feature list styling */
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8f9fa;
+  padding: 12px 15px;
+  border-radius: 6px;
+}
+
+.feature-item i {
+  color: #3498db;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Scenarios grid styling */
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.scenario-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.scenario-header {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.scenario-number {
+  background-color: white;
+  color: #3498db;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.scenario-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.scenario-steps {
+  padding: 15px;
+}
+
+.scenario-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.scenario-step:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.scenario-step i {
+  color: #3498db;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.scenario-step.result {
+  font-weight: 600;
+  color: #2c3e50;
+  background-color: #eaf2f8;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/* Alert box styling */
+.alert-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.alert-icon {
+  color: #ffc107;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.alert-content h4 {
+  margin: 0 0 4px 0;
+  color: #856404;
+  font-size: 16px;
+}
+
+.alert-content p {
+  margin: 0;
+  color: #856404;
+}
+
+/* Option grid styling */
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.option-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.option-header {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.option-header i {
+  font-size: 18px;
+}
+
+.option-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.option-content {
+  padding: 15px;
+}
+
+.option-content p {
+  margin: 0 0 8px 0;
+  color: #555;
+}
+
+.option-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Three column layout for task interface and examples */
+.three-column-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Column styling */
+.interface-column,
+.example-column {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Column header styling */
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #3498db;
+  color: white;
+  padding: 3px 5px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.column-header i {
+  font-size: 14px;
+}
+
+.column-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Interface mockup styling */
+.interface-mockup {
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  margin: 15px;
+  flex-grow: 1;
+}
+
+.mockup-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+/* Real trial interface styling */
+.real-trial-interface {
+  padding: 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  transform: scale(0.75);
+  transform-origin: top center;
+  margin-bottom: -50px;
+}
+
+.offers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.textPrompt {
+  text-align: center;
+  background-color: #f9e7c0;
+  border-radius: 5px;
+  padding: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.textPrompt p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.trustElements {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px;
+  margin-bottom: 10px;
+  padding-right: 0;
+}
+
+.player1Card, .player2Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.player1Image, .player2Image {
+  margin: 0;
+}
+
+.player1Name, .player2Name {
+  background-color: #2c3e50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+  width: 80%;
+  margin-top: 5px;
+}
+
+.player1Name p, .player2Name p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.investmentCard {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  margin-right: -10px;
+}
+
+.leftBlock, .rightBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+.leftBlock p, .rightBlock p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mockup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.balance-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.balance-display i {
+  color: #27ae60;
+}
+
+.decision-prompt {
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.decision-keys {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 15px 0;
+}
+
+.key-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.key-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* Example steps styling */
+.example-steps {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.example-step {
+  display: flex;
+  gap: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.example-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.step-number {
+  width: 18px;
+  height: 18px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-content {
+  flex-grow: 1;
+}
+
+.step-content p {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.key-highlight {
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-weight: bold;
+  margin: 0 2px;
+  font-size: 13px;
+}
+
+.balance-update, .multiplication, .return-calculation {
+  background-color: #f1f5f9;
+  padding: 3px 6px;
+  border-radius: 4px;
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.balance-update i {
+  color: #e74c3c;
+}
+
+.balance-update.positive i {
+  color: #27ae60;
+}
+
+.example-result {
+  margin-top: 3px;
+  padding-top: 3px;
+  border-top: 1px solid #3498db;
+}
+
+.final-calculation {
+  background-color: #eaf2f8;
+  padding: 5px;
+  border-radius: 6px;
+  margin-top: 3px;
+}
+
+.final-calculation p {
+  margin: 0 0 3px 0;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 13px;
+}
+
+.calculation-steps {
+  font-weight: 600;
+  color: #3498db;
+  font-size: 13px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .three-column-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .interface-mockup.real-game {
+    max-height: 200px;
+  }
+}
+
+.wrapTextBox h1 {
+  font-size: 26px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.wrapTextBox h2 {
+  font-size: 22px;
+  color: #34495e;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+.wrapTextBox h3 {
+  font-size: 19px;
+  color: #7f8c8d;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.wrapTextBox p, .wrapTextBox ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.wrapTextBox ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.wrapTextBox ul li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrapTextBox strong {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Icon styling */
+.icon {
+  margin-right: 12px;
+  color: #3498db;
+  font-size: 1.1em;
+  width: 24px;
+  text-align: center;
+}
+
+/* Styling for icons within list items */
+.icon-li {
+  margin-right: 10px;
+  color: #3498db;
+  font-size: 0.95em;
+  margin-top: 0.1em;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.info-box {
+  background-color: #eaf2f8;
+  border-left: 5px solid #3498db;
+  padding: 15px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.info-box p {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.info-box .icon {
+  color: #3498db;
+  font-size: 1.2em;
+}
+
+/* Style for form elements */
+#participant-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#participant-form input {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  text-align: center;
+}
+
+#participant-form button {
+  background-color: #4682B4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.gameHeader {
+  background-color: rgb(243, 241, 232); /* Changed to beige color */
+  color: rgb(243, 241, 232);
+  border-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 10vh;
+}
+
+.survey{
+  margin-top: 200px;
+  background: transparent; /* Changed from white to transparent */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+  font-size: 18px;
+  margin-left: 400px;
+  margin-right: 400px;
+  height: 550px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.survey2{
+  margin-top: 0; /* Removed top margin for vertical centering */
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Changed to center for vertical centering */
+  align-items: center;
+  font-family: Helvetica;
+  font-size: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  min-height: 400px;
+  max-height: 80vh;
+  text-align: center;
+  overflow-y: auto; /* Allow vertical scrolling */
+  padding: 10px;
+}
+
+.surveyAvatar{
+  margin-top: 20px; /* Significantly reduced top margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+  text-align: center;
+  width: 100%; /* Ensure width fills the container */
+  padding: 10px; /* Add padding */
+}
+
+.offerCard {
+  background-color: rgb(243, 241, 232); /* Changed to beige color */
+  border-color: rgb(243, 241, 232);
+  color: rgb(0, 0, 0);
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Changed from flex-start to center for vertical centering */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.wrapTextBox {
+  background: rgb(243, 241, 232);
+  border-color: rgb(243, 241, 232);
+  color: rgb(0, 0, 0);
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.bidOffer {
+  background: rgb(243, 241, 232);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Changed from flex-start to center for vertical centering */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  font-family: Helvetica;
+  font-size: 18px;
+  overflow: hidden;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.offers {
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Already centered vertically */
+  align-items: center; /* Added horizontal centering */
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  gap: 20px;
+}
+
+.textPrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(46, 46, 96);
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Added instructionsText class for vertical centering */
+.instructionsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.trustElements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.investmentCard {
+  background: rgb(239, 224, 182);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 300px;
+  gap: 70px;
+}
+
+.leftBlock {
+  background: rgb(255, 252, 244);
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 80px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-family: "Helvetica";
+}
+
+.rightBlock {
+  background: rgb(255, 252, 244);
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 80px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-family: "Helvetica";
+}
+
+.offerChoices {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 200px;
+}
+
+.optionA {
+  background: rgb(160, 134, 47);
+  border-radius: 20px;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+
+.optionB {
+  background: rgb(165, 162, 151);
+  border-radius: 20px;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.outcomeText {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-family: "Helvetica";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Main container for the entire layout */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+/* Main title at the top of the page */
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Split container for side-by-side layout */
+.split-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+/* 左列：游戏界面 */
+.game-interface {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 右列：结果和奖金 */
+.outcomes-bonus {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+}
+
+/* 结果选项卡样式 */
+.outcome-option {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 奖金计算部分样式 */
+.bonus-calculation {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 确保内容在容器内正确显示 */
+.wrapTextBox {
+    max-width: none;
+    width: 100%;
+}
+
+/* 调整选项框样式 */
+.option-box {
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e9ecef;
+}
+
+.option-box h4 {
+    color: rgb(46, 46, 96);
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.option-box p {
+    margin: 5px 0;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: left;
+}
+
+/* 调整文字大小和间距 */
+.gameHeader {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sectionHeader {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+/* Player row layout */
+.player-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Player column */
+.player-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+/* Player avatar */
+.player-avatar {
+  background-color: #f0f8ff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* Player label */
+.player-label {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Decision area */
+.decision-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+/* Decision title */
+.decision-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Decision buttons container */
+.decision-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual decision button */
+.decision-button {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  width: 80px;
+  position: relative;
+}
+
+/* Clean button without any decorations */
+.clean-button::after {
+  display: none !important;
+}
+
+.decision-button p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.decision-button small {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Outcomes card */
+.outcomes-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.outcomes-card h3 {
+  color: #2a9d8f;
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Bonus calculation section */
+.bonus-calculation {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.bonus-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Bonus description */
+.bonus-description {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Bonus rounds display */
+.bonus-rounds {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.round {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 8px;
+  width: 40px;
+  text-align: center;
+}
+
+/* Round number */
+.round-number {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Round label */
+.round-label {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Arrow between rounds and average */
+.arrow {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Average container */
+.average {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 8px;
+  width: 80px;
+  text-align: center;
+}
+
+/* Average label */
+.average-label {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Average value */
+.average-value {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Remember section */
+.remember-section {
+  background-color: #f8f0fc;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Remember header */
+.remember-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Remember content */
+.remember-content p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.playerDisplay {
+  background: rgb(243, 241, 232);
+  display: flex;
+  flex-direction: row;
+  gap: 400px
+}
+
+.player1Card {
+  background: rgb(243, 241, 232);
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+}
+
+.player1Name {
+  background-color: rgb(46, 46, 96);
+  color: white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.player2Card {
+  background: rgb(243, 241, 232);
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+}
+
+.player2Name {
+  background-color: rgb(46, 46, 96);
+  color: white;
+  border-color: gray;
+  border-radius: 25px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.optionA {
+  background: rgb(160, 134, 47);
+  border-radius: 20px;
+  font-family: Helvetica;
+  font-size: 16px;
+  width: 80px;
+}
+
+.optionB {
+  background: rgb(165, 162, 151);
+  border-radius: 20px;
+  font-family: Helvetica;
+  font-size: 16px;
+  width: 80px;
+}
+
+/* 统一按钮基础样式 */
+/* Button styles moved to button_styles.css */
+
+/* 多按钮位置调整 */
+.jspsych-instructions-nav {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 40px !important;
+    position: fixed !important;
+    bottom: 50px !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+}
+
+#jspsych-instructions-back {
+    position: fixed !important;
+    left: calc(50% - 80px) !important;
+    transform: none !important;
+}
+
+#jspsych-instructions-next {
+    position: fixed !important;
+    left: calc(50% + 80px) !important;
+    transform: none !important;
+}
+
+/* Style all buttons consistently */
+button:not(.jspsych-btn):not(#jspsych-instructions-back):not(#jspsych-instructions-next) {
+    background-color: #4682B4 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+
+/* Remove all transitions and animations */
+* {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Ensure content doesn't overlap with fixed buttons */
+.jspsych-content {
+    margin-bottom: 100px !important;
+    padding-bottom: 50px !important;
+}
+
+/* 表单内容区域调整 */
+.jspsych-survey-html-form,
+.jspsych-survey-multi-choice,
+.jspsych-survey-likert,
+.jspsych-survey-text {
+    padding-bottom: 100px !important;
+}
+
+/* 禁用按钮样式 */
+.jspsych-btn:disabled,
+button[type="submit"]:disabled,
+.jspsych-survey-html-form button:disabled {
+    background-color: #cccccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+}
+
+/* 确保表单中的提交按钮样式一致 */
+form button[type="submit"],
+.jspsych-survey-html-form-submit {
+    margin-top: 20px !important;
+}
+
+/* 确保所有按钮文本对齐和间距一致 */
+.jspsych-btn span,
+button[type="submit"] span,
+.jspsych-survey-html-form button span {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* 优化按钮在移动设备上的显示 */
+@media screen and (max-width: 768px) {
+    .jspsych-btn,
+    #jspsych-instructions-back,
+    #jspsych-instructions-next,
+    .jspsych-survey-html-form button,
+    button[type="submit"],
+    .participant-id-button,
+    .username-button {
+        min-width: 140px !important;
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* Button styles moved to button_styles.css */
+
+/* Button styles moved to button_styles.css */
+
+/* Basic display element settings */
+.jspsych-display-element {
+    position: relative !important;
+    min-height: 100vh !important;
+}
+
+/* 统一文本居中 */
+.jspsych-content {
+    text-align: center !important;
+}
+
+.jspsych-content p,
+.jspsych-content div,
+.jspsych-content span,
+.jspsych-survey-html-form,
+.jspsych-survey-multi-choice,
+.jspsych-html-button-response,
+.jspsych-instructions {
+    text-align: center !important;
+}
+
+/* 特别处理表单和选项 */
+.jspsych-survey-multi-choice-question {
+    margin: 15px 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+}
+
+/* 问题标题样式 */
+.jspsych-survey-multi-choice-question .jspsych-survey-multi-choice-text {
+    margin-bottom: 10px !important;
+    text-align: center !important;
+}
+
+/* 水平排列的选项样式 - 覆盖jsPsych默认样式 */
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option {
+    display: inline-block !important;
+    margin-left: 0.5em !important;
+    margin-right: 0.5em !important;
+    vertical-align: top !important;
+    width: 22% !important;
+    text-align: center !important;
+    padding: 5px !important;
+    box-sizing: border-box !important;
+}
+
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option label {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option input[type='radio'] {
+    margin: 0 5px 0 0 !important;
+    transform: scale(1.1) !important;
+    flex-shrink: 0 !important;
+}
+
+/* Add hover and selected states for better visibility */
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option:hover {
+    background-color: rgba(42, 157, 143, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option input[type='radio']:checked + label,
+.jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option:has(input[type='radio']:checked) {
+    background-color: rgba(42, 157, 143, 0.15) !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+}
+
+/* 修改 survey 类的样式，使用相对单位 */
+.survey {
+    margin: 5vh auto !important;
+    padding: 20px !important;
+    width: 80% !important;
+    max-width: 1200px !important;
+    height: auto !important;
+    min-height: 550px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow-y: auto !important;
+    background: transparent !important;
+}
+
+/* 确保内容区域有足够的底部间距，不被固定按钮遮挡 */
+.jspsych-content-wrapper {
+    padding-bottom: 100px !important;
+}
+
+/* 确保所有内容在视口内可见 */
+.jspsych-content-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.no-italic *, .no-italic label, .no-italic input, .no-italic span, .no-italic p, .no-italic div {
+    font-style: normal !important;
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* 更强力的覆盖，针对survey-multi-choice的所有元素 */
+.no-italic .jspsych-survey-multi-choice *,
+.no-italic .jspsych-survey-multi-choice-question *,
+.no-italic .jspsych-survey-multi-choice-option *,
+.no-italic .jspsych-survey-multi-choice-text,
+.no-italic .jspsych-survey-multi-choice-horizontal *,
+.no-italic .jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option label,
+.no-italic .jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option span,
+.no-italic .jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option p,
+.no-italic .jspsych-survey-multi-choice-horizontal .jspsych-survey-multi-choice-option div {
+    font-style: normal !important;
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* 针对所有可能的斜体样式进行覆盖 */
+.no-italic em,
+.no-italic i,
+.no-italic .italic,
+.no-italic [style*="font-style: italic"],
+.no-italic [style*="font-style:italic"] {
+    font-style: normal !important;
+    font-family: 'Times New Roman', Times, serif !important;
+}

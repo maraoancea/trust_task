@@ -1,0 +1,57 @@
+<!-----------------------------------------------------------------------------------
+Dynamic Trust Task written in jspsych by Amrita K. Lamba @ MIT - 2024
+----------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task Session</title>
+
+    <!---JATOS --->
+    <script src="jatos.js"></script>
+
+    <!----jspsych-->
+    <script src="jspsych/dist/jspsych.js"></script>
+    <script src="jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-image-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="jspsych/dist/plugin-instructions.js"></script>
+    <script src="jspsych/dist/plugin-preload.js"></script>
+    <script src="jspsych/dist/plugin-survey-multi-choice.js"></script>
+    <script src="jspsych/dist/plugin-survey-html-form.js"></script>
+    <script src="jspsych/dist/plugin-survey.js"></script>
+    <script src="jspsych/dist/plugin-fullscreen.js"></script>
+    <link rel="stylesheet" href="trust_custom.css">
+    <link rel="stylesheet" href="button_styles.css">
+    <link rel="stylesheet" href="likert_override.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Disable scrollbars script -->
+    <script src="disable_scrollbars.js"></script>
+    <!-- Fullscreen monitor script -->
+    <script src="fullscreen_monitor.js"></script>
+    <!-- Progress bar script -->
+    <script src="progress_bar.js"></script>
+    <!-- Bonus calculation script -->
+    <script src="calculate_bonus.js"></script>
+</head>
+
+<body>
+    <!--load task functions first-->
+    <script src="setup_html_constructor.js"></script>
+    <script src="instructions.js"></script>
+    <script src="shuffle_identities.js"></script>
+    <script src="generate_offer_type.js"></script>
+    <script src="compute_trial_earnings.js"></script>
+    <script src="instructions_html_constructor.js"></script>
+    <script src="task_html_constructor.js"></script>
+    <script src="post_task_html_constructor.js"></script>
+
+    <!--load task modules in correct order-->
+    <script src="02_trust_functions.js"></script>
+    <script src="01_trust_instructions.js"></script>
+    <script src="03_trust_post_task.js"></script>
+    <script src="00_trust_timeline.js"></script>
+</body>
+
+</html>

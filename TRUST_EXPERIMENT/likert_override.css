@@ -1,0 +1,74 @@
+//* Likert scale style override
+ * This CSS file overrides jsPsych's default Likert scale styles
+ * The main purpose is to hide the numbers above the scale and only keep the numbers below
+ */* 里克特量表样式覆盖
+ * 这个CSS文件用于覆盖jsPsych默认的里克特量表样式
+ * 主要目的是隐藏量表上方的数字，只保留下方的数字
+ */
+
+/* 隐藏所有Likert量表选项标签 */
+.jspsych-survey-likert-opts li label.jspsych-survey-likert-opt-label,
+.jspsych-survey-likert-opts li label,
+.jspsych-survey-likert-opt-label {
+    font-size: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+    position: absolute !important;
+    overflow: hidden !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 隐藏Likert量表上方的线条 */
+.jspsych-survey-likert-opts:before {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    content: '' !important;
+    background-color: transparent !important;
+}
+
+/* Ensure numbers below the scale are visible */
+.jspsych-survey-likert-option-tick {
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Unified Continue button style */
+button.jspsych-btn,
+.jspsych-survey-likert-form button,
+.jspsych-survey-form button.jspsych-survey-next,
+.jspsych-survey-form button.jspsych-survey-finish {
+    position: fixed !important;
+    bottom: 50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding: 8px 20px !important;
+    background-color: #3498db !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 120px !important;
+    z-index: 1000 !important;
+}
+
+button.jspsych-btn:hover,
+.jspsych-survey-likert-form button:hover,
+.jspsych-survey-form button.jspsych-survey-next:hover,
+.jspsych-survey-form button.jspsych-survey-finish:hover {
+    background-color: #2980b9 !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;
+}
+
+/* 添加底部填充，确保内容不被固定按钮遮挡 */
+.jspsych-content {
+    padding-bottom: 100px !important;
+}

@@ -134,7 +134,11 @@ async function downloadAllData() {
           fs.writeFileSync(outputFileCSV, csv_txt);
 
           // save data as json
-          fsExtra.outputJSONSync(outputFileJSON, data, { spaces: 2 });
+          //const jsonOut = { ...data, results: trials };
+
+          fsExtra.outputJSONSync(outputFileJSON,  { results: data }, { spaces: 2 });
+
+         // fsExtra.outputJSONSync(outputFileJSON, data, { spaces: 2 });
           // save data as csv
            console.log(`Data saved successfully: ${outputFileJSON}`);
         } catch (error) {
@@ -176,6 +180,39 @@ async function savePathPrompt() {
       return true;
     },
   });
+}
+/**
+ * Prompts the user to confirm continuation of the CLI, including future conflicts
+ * @param {string} outputFileJSON
+ * @param {boolean} overwriteAll Whether or not all was already selected
+ * @returns
+ */
+async function confirmOverwritePrompt(file, overwriteAll) {
+  if (overwriteAll) return 'yes'; // User already confirmed overwrite of all files
+
+  const answer = await expand({
+    message: `${file} already exists. Overwrite?`,
+    default: 'n',
+    expanded: true,
+    choices: [
+      {
+        key: 'y',
+        name: 'Overwrite this file',
+        value: 'yes',
+      },
+      {
+        key: 'a',
+        name: 'Overwrite all files',
+        value: 'all',
+      },
+      {
+        key: 'n',
+        name: 'Skip this file',
+        value: 'no',
+      },
+    ],
+  });
+  return answer;
 }
 
 /**Called by download all, turns text file into list of participant IDS to loop through */

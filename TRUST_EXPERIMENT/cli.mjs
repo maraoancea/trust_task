@@ -23,7 +23,7 @@ async function main() {
   //needed for downloadAll
   ACTION = await actionPrompt();
   //STUDY_ID = await studyIDPrompt();
-  PARTICIPANT_IDS = participantIDAll();
+  //PARTICIPANT_IDS = participantIDAll();
 
   switch (ACTION) {
     case 'download':
@@ -51,7 +51,7 @@ main();
 
 async function downloadAllData() {
   let overwriteAll = false;
-  const rawDataDir = './participant_responses/rawData/'; //contains text files from jatos
+  const rawDataDir = '../participant_responses/rawData/'; //contains text files from jatos
   const fileIDMap = getParticipantFilesAndIDs(rawDataDir);
 
   // loop through participant Ids and download each file
@@ -65,10 +65,10 @@ async function downloadAllData() {
       // Get the path of the file to be saved
       const inputFileTXT =  path.join(rawDataDir, file);
       const outputFileJSON =
-        `${OUTPUT_ROOT}/participant_responses/` +
+        `../participant_responses/` +
         `prolific/${pID}/${pID}.json`.replaceAll(':', '_'); // (":" are replaced to prevent issues with invalid file names)
       const outputFileCSV =
-        `${OUTPUT_ROOT}/participant_responses/` +
+        `../participant_responses/` +
         `prolific/${pID}/${pID}.csv`.replaceAll(':', '_'); // (":" are replaced to prevent issues with invalid file names)
 
       // Determine if the file should be saved
@@ -221,7 +221,7 @@ async function confirmOverwritePrompt(file, overwriteAll) {
 function participantIDAll() {
   const PARTICIPANT_IDS = [];
   //const readline = require('readline');
-  const filePath = './participant_responses/participant_ids.txt';
+  const filePath = '../participant_responses/participant_ids.txt';
   const fileStream = fs.createReadStream(filePath);
   // read participant id csv one line at a time to put them all in a list
   const rl = readline.createInterface({
